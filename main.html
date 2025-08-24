@@ -1,0 +1,328 @@
+<DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Table Using HTML and CSS</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+        <style>  
+     * {
+      padding: 0;
+      margin: 2;
+      box-sizing: "border-box";
+      font-family: "Arial";
+    }
+    body {
+      background:grey;
+      display: "flex";
+      align-items: "center";
+      justify-content: "center";
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1440px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 2px 5px 10px (0, 0, 0, 0.5);
+    }
+    .container h2 {
+      padding: 2px 1px;
+      text-align: center;
+      background: #e74c3c; 
+      color: #fff;
+      font-size: 100rem;
+    }
+    .tbl {
+      width: 100%;
+      border-collapse: "collapse";
+    }
+    .tbl thead {
+      background: #424949;
+      color: #fff;
+    }
+    .tbl thead tr th {
+      font-size:20;
+      padding: 0.8;
+      letter-spacing: 0.2;
+     
+      border: 1px double #aab7b8;
+    }
+    .tbl tbody tr td {
+      font-size: 15;
+      letter-spacing: 0.2;
+      font-weight: normal;
+      text-align: center;
+      border: 1px solid #aab7b8;
+      padding: 0.8;
+    }
+    .tbl tr:nth-child(even) {
+      background: #ccc;
+    }
+    .tbl tr:hover td {
+      background: #839192;
+      color: #000;
+    }
+    .tbl button {
+      display: "inline-block";
+      border: "solid";
+      margin: 1;
+      padding: 0.4rem;
+      border-radius: 1px;
+    }
+    .btn_trash {
+      background: #e74c3c;
+      color: #fff;
+    }
+    .btn_edit {
+      color: #fff;
+      background: #1e8449;
+    }
+      .tbl tr,
+      .tbl td {
+        display: "block";
+        width: 20%;
+      }
+      .tbl tr {
+        margin-bottom: 1;
+      }
+      .tbl tbody tr td {
+        text-align: "left";
+      }
+      .tbl td::before {
+        width: 50%;
+        padding-left: 1.2;
+        
+      }
+      .tbl tbody tr td:hover {
+        background: #ccc;
+        color: #000;
+      }
+      .tbl_content {
+        padding: 1;
+      }
+      #form {
+        background-color: lightsalmon;
+        border: 2px solid black;
+        padding: 40px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        height: 950px;
+        width: 700px;
+        line-height: 0px;
+      }
+    
+    </style>
+    </head>
+      
+    <body>
+        <div id="header">
+          <div class="table">
+            <h2> Table Using HTML and CSS</h2>
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>User Name</th>
+                  <th>User Email</th>
+                  <th>Attendance</th>
+                  <th colspan="2">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>Mahnoor Ashfaq</td>
+                  <td>ashfaqmahnoor3@gmail.com</td>
+                  <td>Present</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0002</td>
+                  <td>Kinza Asif</td>
+                  <td>kinzaasif@gmail.com</td>
+                  <td>Present</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0003</td>
+                  <td>Noor Ahmed</td>
+                  <td>noora@gmail.com</td>
+                  <td>Absent</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0004</td>
+                  <td>Javeriya Riaz</td>
+                  <td>JaRiaz@gmail.com</td>
+                  <td>Present</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0005</td>
+                  <td>kulsoom Malik</td>
+                  <td>kulsoomm@gmail.com</td>
+                  <td>Present</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>0006</td>
+                  <td>Iqra Mir</td>
+                  <td>miriqra@gmail.com</td>
+                  <td>Absent</td>
+                  <td data-label="Edit">
+                    <button class="btn_edit"><i class="fa fa-pencil"></i></button>
+                  </td>
+                  <td data-label="Delete">
+                    <button class="btn_trash"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div id="section">
+            <div class="form">
+        <h2> Making Form as assignment</h2>
+        <centre><p>Student Registration Form</p></centre>
+        <form>
+         <lable for="fname">First Name:</lable><br>
+        <input type="text" id="fname"name="fname"><br>
+        <lable for="lname">Last Name:</lable><br>
+        <input type="text" id="lname"name="lname"><br>
+        <lable for="email">Email id                                    :</lable><br>
+        <input type="text" id="email"name="email"><br>
+        <lable for="connect no">Contact Number:</lable><br>
+        <input type="number" id="connect no"name="contact no"><br>
+        <tr>
+                 <td>GENDER:</td>
+                 <td>
+                        <input
+                                            id="female"
+                                            type="radio"
+                                            name="gender"
+                                            value="f"
+                         />
+                         <label for="female">Female</label>
+                          <input
+                                            id="male"
+                                            type="radio"
+                                            name="gender"
+                                            value="m"
+                          />
+                          <label for="male">Male</label>
+                </td>
+        </tr>  
+        <tr><br>
+                                    <td>HOBBIES</td>
+                                    <td>
+                                        <input
+                                            type="checkbox"
+                                            name="Singing"
+                                            value="Singing"
+                                        />
+                                        Singing
+                                        <input
+                                            type="checkbox"
+                                            name="HOBBIES"
+                                            value="dancing"
+                                        />
+                                        Dancing
+                                        <input
+                                            type="checkbox"
+                                            name="HOBBIES"
+                                            value="Drawing"
+                                        />
+                                        Drawing
+                                        <input
+                                            type="checkbox"
+                                            name="HOBBIES"
+                                            value="Sketching"
+                                        />
+                                        Sketching <br />
+                                        <input
+                                            type="checkbox"
+                                            name="HOBBIES"
+                                            value="Others"
+                                        />
+                                        Others<input
+                                            type="text"
+                                            name="HOBBIES"
+                                            size="30"
+                                            maxlength="30"
+                                            placeholder="Enter any other hobby"
+                                        />
+                                    </td>
+        </tr>
+        <tr>
+                                    <td>COURSES:</td>
+                                    <td>
+                                        <input
+                                            id="BCA"
+                                            type="radio"
+                                            name="COURSES"
+                                            value="BCA"
+                                        />
+                                        <label for="BCA">BCA</label>
+                                        <input
+                                            id="B.Com"
+                                            type="radio"
+                                            name="COURSES"
+                                            value="B.Com"
+                                        />
+                                        <label for="B.Com">B.Com</label>
+                                        <input
+                                            id="B.Sc"
+                                            type="radio"
+                                            name="COURSES"
+                                            value="B.Sc"
+                                        />
+                                        <label for="B.Sc">B.Sc</label>
+                                        <input
+                                            id="B.A"
+                                            type="radio"
+                                            name="COURSES"
+                                            value="B.A"
+                                        />
+                                        <label for="B.A">B.A</label>
+                                    </td><br>
+                                        <br>
+        <input type="submit" value="submit">                 
+       </tr>
+       </form>
+       </div>	
+       </div>	
+      </body>
+      </html>
